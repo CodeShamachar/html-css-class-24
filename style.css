@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hind Siliguri", serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  background: #1e1c1f;
+}
+
+.form{
+  position: relative;
+  height: 100px;
+  width: 500px;
+  background-color: 1e1c1f;
+  border-radius: 10px;
+}
+
+.email_input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 3px solid #fff;
+  background: none;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  outline: none;
+  padding-left: 25px;
+  color: #fff;
+}
+
+.email_input:hover{
+  border-color: #fffc30;
+}
+.email_input:focus{
+  border-color: #5dff30;
+}
+
+.email_label{
+  position: absolute;
+  left: 1.5rem;
+  top: 2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: text;
+  transition: top .2s ease-in, left .2s ease-in, font-size .2s ease-in;
+}
+
+.email_input:focus ~ .email_label{
+  top: -10px;
+  font-size: .8rem;
+  background: #1e1c1f;
+  left: 0.8rem;
+  padding: 2px 5px;
+}
+
+.email_input:not(:placeholder-shown).email_input:not(:focus) ~ .email_label{
+  top: -10px;
+  font-size: .8rem;
+  background: #1e1c1f;
+  left: 0.8rem;
+  padding: 2px 5px;
+}
